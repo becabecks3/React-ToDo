@@ -1,0 +1,50 @@
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #ff9e00;
+}
+
+form input{
+    height: 30px;
+    width: 300px;
+    font-size: 20px;
+    border: none;
+    margin-right: 50px;
+    margin-left: 50px;
+    color: white;
+    background-color: #3c096c;
+    
+}
+
+.addbtn{
+    text-transform: uppercase;
+    height: 30px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    background-color: #ff9e00;
+    color: #3c096c;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clear, .reset{
+    height: 30px;
+    width: 150px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: #ff9e00;
+    color: #3c096c;
+
+}

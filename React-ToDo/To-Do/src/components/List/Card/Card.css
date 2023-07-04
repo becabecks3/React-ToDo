@@ -1,0 +1,25 @@
+.item-container{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    list-style: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+
+
+.dlt-item{
+    height: 30px;
+    width: 150px;
+    background-color:blue;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 20px;
+    background-color: #ff9e00;
+    color: #3c096c;
+}
+
