@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './List.css';
 import Card from './Card';
 
-
 const List = () => {
   const [todos, setTodos] = useState([]);
   const [notification, setNotification] = useState(null);
@@ -21,14 +20,13 @@ const List = () => {
     e.target.todo.value = '';
   };
 
-  const deleteTodo = (index) => {
-    setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
+  const deleteTodo = (deletedTodo) => {
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo !== deletedTodo));
   };
 
-  
   const printTodos = () => {
     return todos.map((todo, index) => (
-      <Card  deleteTodo={() => deleteTodo(index)} key={index} todo={todo}/>
+      <Card deleteTodo={() => deleteTodo(todo)} key={index} todo={todo} />
     ));
   };
 
@@ -38,8 +36,8 @@ const List = () => {
 
   const resetAll = () => {
     setTodos([]);
+    setNotification(null);
   };
-
 
   return (
     <section>
@@ -50,15 +48,15 @@ const List = () => {
           Add
         </button>
       </form>
-      <ul className='list-container'>{printTodos()}</ul>
-      {notification && <p className="todo-message">{notification}</p>}
-      <article className='buttons'>
-      <button className="reset" onClick={resetAll}>
-        Reset
-      </button>
-      <button className="clear" onClick={clearAll}>
-        Clear
-      </button>
+      <ul className="list-container">{printTodos()}</ul>
+      {notification && <p>{notification}</p>}
+      <article className="buttons">
+        <button className="reset" onClick={resetAll}>
+          Reset
+        </button>
+        <button className="clear" onClick={clearAll}>
+          Clear
+        </button>
       </article>
     </section>
   );
